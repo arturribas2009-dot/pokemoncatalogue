@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "Pokemon Classic Regular";
+    src: url("https://db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.eot");
+    src: url("https://db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.svg#Pokemon Classic Regular")format("svg");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pokemon Classic Regular";
+}
+body{
+    flex-direction: column;
+}
+header {
+    position: relative;
+    background-color: #EF4036;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 10px solid #231F20;
+    margin-bottom: 50px;
+}
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 10px solid #231F20;
+    border-radius: 50%;
+    z-index: 10;
+}
+#titulo {
+    color: white;
+    font-size: 24px;
+} 
+#botaohome {
+    background-color: #231F20;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#botaohome:hover {
+    background-color: #ffcb05;
+    color: #3b4cca;
+}
+.pkpic {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    width: 600px;
+}
+.pk-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: #231F20;
+    font-weight: bold;
+    width: 600px;
+    transition: transform 0.3s;
+
+}
+.img-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 15px;
+}
+.img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.4s ease-in-out;
+}
+.shiny {
+    opacity: 0;
+}
+.pk-card:hover .normal {
+    opacity: 0;
+}
+.pk-card:hover .shiny {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px gold);
+}
+.descpk{
+    margin: 10px;
+    padding: 10px;
+    text-align:center;
+}
